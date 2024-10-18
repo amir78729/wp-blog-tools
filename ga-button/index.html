@@ -26,6 +26,10 @@
           color: #ffffff;
       }
 
+      pre, #outputPreview {
+          border-radius: .375rem;
+      }
+
       .form-control {
           background-color: #2a2a2a;
           color: #ffffff;
@@ -71,7 +75,7 @@
       const target = openInNewTab ? "_blank" : "_self";
 
       if (id && url && buttonText) {
-        const code = `<button id="${id}" onclick="(async function(_url) { console.log(this.id); window.open(_url, '${target}'); }).call(this, '${url}')">${buttonText}</button>`;
+        const code = `<button style="border-radius: 12px !important;" id="${id}" role="button" onclick="(async function(_url) { console.log(this.id); window.open(_url, '${target}'); }).call(this, '${url}')">${buttonText}</button>`;
 
         document.getElementById("outputCode").textContent = code;
         document.getElementById("outputPreview").innerHTML = code;
@@ -98,7 +102,7 @@
     }
   </script>
 </head>
-<body class="container mt-5 text-light bg-dark">
+<body class="container mt-5 text-light">
 <h1 class="mb-4">Dynamic GA Button HTML Code Generator</h1>
 
 <div class="mb-3 row">
@@ -134,15 +138,15 @@
 </div>
 
 <div id="outputCodeContainer" style="display: none;">
-  <h2 class="mt-4">Generated Code:</h2>
-  <pre><code id="outputCode" class="bg-light p-2 pre-wrap" style="border: 1px solid #444;"></code></pre>
-  <button class="btn btn-primary mt-2" onclick="copyCode()">Copy Code</button>
+  <hr>
+  <div class="d-flex mt-4 mb-2 justify-content-between">
+    <h2>Generated Code:</h2>
+    <button class="btn btn-primary" onclick="copyCode()">Copy</button>
+  </div>
+    <pre id="outputCode" class="bg-light p-2 pre-wrap" style="border: 1px solid #444;"></pre>
+  <div id="outputPreview" class="bg-white p-3" style="border: 1px solid #444;"></div>
 </div>
 
-<div id="outputPreviewContainer" style="display: none;">
-  <h2 class="mt-4">Preview</h2>
-  <div id="outputPreview" class="bg-light p-3" style="border: 1px solid #444;"></div>
-</div>
 
 <!-- Bootstrap Alert for Copy Success -->
 <div id="copyAlert" class="alert alert-success mt-3" role="alert" style="display: none;">
