@@ -75,7 +75,23 @@
       const target = openInNewTab ? "_blank" : "_self";
 
       if (id && url && buttonText) {
-        const code = `<button style="border-radius: 12px !important;" id="${id}" role="button" onclick="(async function(_url) { console.log(this.id); window.open(_url, '${target}'); }).call(this, '${url}')">${buttonText}</button>`;
+        const code = `<button
+  style="border-radius: 12px !important;"
+  id="${id}"
+  role="button"
+  onclick="(
+    async function(_url) {
+      gtag('event', 'click', {
+        'click_text': '${buttonText}',
+        'click_url': window.location.href,
+        'click_target': _url,
+        'click_id': this.id
+      });
+      window.open(_url, '${target}');
+    }).call(this, '${url}')"
+>
+  ${buttonText}
+</button>`;
 
         document.getElementById("outputCode").textContent = code;
         document.getElementById("outputPreview").innerHTML = code;
@@ -143,7 +159,7 @@
     <h2>Generated Code:</h2>
     <button class="btn btn-primary" onclick="copyCode()">Copy</button>
   </div>
-    <pre id="outputCode" class="bg-light p-2 pre-wrap" style="border: 1px solid #444;"></pre>
+  <pre id="outputCode" class="bg-light p-2 pre-wrap" style="border: 1px solid #444;"></pre>
   <div id="outputPreview" class="bg-white p-3" style="border: 1px solid #444;"></div>
 </div>
 
