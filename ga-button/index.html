@@ -139,24 +139,17 @@
   ]
 
   function init() {
-    console.log('🐕 sag ', 'init'); // TODO: REMOVE ME ⚠️
-
     const urlSelect = document.getElementById("urlSelect")
     if (urlSelect) urlSelect.innerHTML = urlOptions.map(u => `<option value="${u.id}">${u.text}</option>`).join('\n')
   }
 
   function updateCode() {
     const selectedOption = document.getElementById("urlSelect").value;
-
     const openInNewTab = document.getElementById("newTabCheckbox").checked;
     const showIcon = document.getElementById("showIconCheckbox").checked;
-
     const target = openInNewTab ? "_blank" : "_self";
-    console.log('🐕 sag selectedOption', selectedOption); // TODO: REMOVE ME ⚠️ 
-    
     const selectedCta = urlOptions.find(cta => cta.id === selectedOption)
-    console.log('🐕 sag selectedCta', selectedCta); // TODO: REMOVE ME ⚠️
-    
+
     if (selectedCta) {
       const code = `<button
   style="outline: none; background: ${selectedCta.color}; border-radius: 12px !important; color: #FFF; display: flex; font-family: Dana; flex-direction: row; font-size: 16px; height: 56px !important; margin: 7px; max-width: 224px !important; padding: 16px; text-align: center; box-sizing: border-box; text-decoration: none; width: 100%;"
@@ -179,9 +172,6 @@
   ${selectedCta.text ? `<span style="margin: auto; line-height: initial; font-weight: 600;">${selectedCta.text}</span>` : ''}
 </button>`;
       
-      console.log('🐕 sag code', selectedCta); // TODO: REMOVE ME ⚠️
-      
-
       document.getElementById("outputCode").textContent = code;
       document.getElementById("outputPreview").innerHTML = code;
 
@@ -211,5 +201,3 @@
 </script>
 </body>
 </html>
-
-
