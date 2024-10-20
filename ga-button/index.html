@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Amirhossein Alibakhshi">
   <meta name="description" content="A tool to dynamically generate HTML buttons that trigger a GA event and then redirect to a new URL">
-  <meta name="keywords" content="button generator, dynamic HTML, Amirhossein Alibakhshi, GA4">
+  <meta name="keywords" content="button template, dynamic HTML, Amirhossein Alibakhshi, GA4">
 
-  <meta property="og:title" content="GA Button HTML Generator">
+  <meta property="og:title" content="GA Button HTML Template">
   <meta property="og:description" content="A tool to dynamically generate HTML buttons that trigger a GA event and then redirect to a new URL">
   <meta property="og:image" content="https://db0dce98.rocketcdn.me/en/files/2023/12/google-analytics-4.webp">
   <meta property="og:url" content="https://amirhosseinalibakhshi.com">
@@ -16,7 +16,7 @@
 
   <meta name="theme-color" content="#0D6EFD">
 
-  <title>GA Button HTML Generator</title>
+  <title>Tapsi Blog CTA Templates (+GA)</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <style>
@@ -74,10 +74,10 @@
 <div>
   <button id="back" class="mb-3" onclick="window.open('/wp-blog-tools', '_self')">back</button>
 </div>
-<h1 class="mb-4">Tapsi Blog CTA Generator (with GA event)</h1>
+<h1 class="mb-4">Tapsi Blog CTA Templates (+GA)</h1>
 
 <div class="mb-3 row">
-  <label for="urlSelect" class="col-sm-2 col-form-label">Target URL:</label>
+  <label for="urlSelect" class="col-sm-2 col-form-label">CTA Type:</label>
   <div class="col-sm-10">
     <select class="form-control" id="urlSelect" onchange="updateCode()">
     </select>
@@ -108,40 +108,42 @@
   <hr>
   <div class="d-flex mt-4 mb-2 justify-content-between">
     <h2>Generated Code:</h2>
-    <button class="btn btn-primary" onclick="copyCode()">Copy</button>
+    <button class="btn btn-primary" id="copyBtn" onclick="copyCode()">Copy</button>
   </div>
   <div id="outputPreview" class="bg-white p-3" style="border: 1px solid #444;"></div>
   <pre id="outputCode" class="bg-light p-2 pre-wrap" style="border: 1px solid #444;"></pre>
 </div>
 
 
-<div id="copyAlert" class="alert alert-success mt-3" role="alert" style="display: none;">
-  Code copied to clipboard successfully!
-</div>
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 <script>
+  const icons = {
+    car: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" fill-rule="evenodd"><g fill="currentColor"><g><g><g><g><g><path fill-opacity="0" d="M0 0H24V24H0z" transform="translate(-978.000000, -437.000000) translate(0.000000, 60.000000) translate(762.000000, 92.000000) translate(32.000000, 197.000000) translate(0.000000, 72.000000) translate(184.000000, 16.000000)"></path><g><path d="M10.25 0l.977.007.604.012.561.018.52.023.48.03.65.052.387.04.18.022.338.048.305.051.276.056.246.059.22.062.193.066.17.068.148.072c.045.024.088.048.127.073l.107.076.047.039.082.079.066.08c.01.014.02.027.028.041l.046.083.02.041.03.084.02.085.021.062c.024.049.056.113.065.193l.036.116.156.458.217.586.261.672.288.712.199.476 1.811-.259.229 1.732-.229.046c-.144.03-.288.049-.433.065l-.431.045.213.326c.394.63.795 1.437.912 2.442l.024.279.087 5.682H18.75V9.333c0-.787-.34-1.411-.884-2.17l-.316-.43-.084-.086c-.031-.036-.066-.079-.102-.132-2.134.214-4.464.318-7.114.318-2.642 0-4.964-.103-7.092-.316l-.054.119c-.023.04-.052.082-.093.123l-.307.407c-.533.722-.89 1.33-.946 2.051l-.008.2V15H0V9.333C0 8.045.512 7.09 1.124 6.268l-.19-.02c-.145-.014-.289-.028-.433-.05l-.217-.037-.229-.046.231-1.732 1.812.259.226-.539.147-.368.208-.537.25-.67.417-1.191c.022-.046.046-.094.075-.145l.038-.061.045-.063.053-.064.1-.097.083-.065.097-.065.113-.064.13-.064.15-.063.172-.062.193-.06.218-.057.244-.055.132-.027.285-.05.316-.048.17-.023.363-.042.398-.038.433-.033.471-.03.51-.023.55-.018.593-.013.637-.006L10.25 0zM15 12.75c.866 0 1.357.57 1.412 1.142l.005.108v1h-1.75v-.5H5.75v.5H4v-1c0-.586.388-1.177 1.25-1.244l.167-.006H15zM2.732 8.976l2.495.132-.091 1.747-2.497-.132.093-1.747zm14.87-.041l.093 1.747-2.497.132-.093-1.747 2.497-.132zm-7.359-7.102c-.226-.006-.445-.01-.657-.012h-.617l-.575.011-.535.02-.494.028-.231.016-.631.056-.368.042-.325.044-.408.067-.31.062-.152.037-.316.921-.192.543-.223.587c-.079.2-.163.403-.251.605 4.182.298 8.332.299 12.666-.001l-.114-.258-.222-.516-.207-.503-.095-.24-.17-.446-.137-.386c-.02-.058-.037-.113-.053-.164-.042-.033-.074-.076-.096-.124l-.195-.043-.248-.044-.143-.022-.322-.045-.37-.043-.635-.06-.475-.037-.513-.031-.548-.027-.58-.02-.612-.013-.646-.004z" transform="translate(-978.000000, -437.000000) translate(0.000000, 60.000000) translate(762.000000, 92.000000) translate(32.000000, 197.000000) translate(0.000000, 72.000000) translate(184.000000, 16.000000) translate(1.750000, 4.500000)"></path></g></g></g></g></g></g></g></g></svg>'
+  }
+
   const urlOptions = [
     {
-      id: 'driver join',
-      url: "https://join.tapsi.ir/login?utm_source=Blog&utm_medium=join-cta-filled-btn&utm_campaign=DA_SEO&_gl=1*1h2enyj*_ga*NDgzMTc2NTUxLjE3MDg5MzY0MTQ.*_ga_0F24611KVS*MTcyOTMyNjk0NS4xOTcuMS4xNzI5MzMwNjUwLjI3LjAuMA..",
-      color: '#1976d2',
+      id: 'Driver Join',
+      url: "https://join.tapsi.ir/driver?utm_source=Blog&utm_medium=join-cta-filled-btn&utm_campaign=DA_SEO&_gl=1*vev481*_ga*OTAwMzc2OTI0LjE2NzU4NDQ0NTY.*_ga_0F24611KVS*MTcyOTM0NDk3NC40NzguMS4xNzI5MzQ1MDI4LjYuMC4w",
+      backgroundColor: '#0065dc',
       text: 'ثبت‌نام راننده خودرو',
-      icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" fill-rule="evenodd"><g fill="#FFF"><g><g><g><g><g><path fill-opacity="0" d="M0 0H24V24H0z" transform="translate(-978.000000, -437.000000) translate(0.000000, 60.000000) translate(762.000000, 92.000000) translate(32.000000, 197.000000) translate(0.000000, 72.000000) translate(184.000000, 16.000000)"></path><g><path d="M10.25 0l.977.007.604.012.561.018.52.023.48.03.65.052.387.04.18.022.338.048.305.051.276.056.246.059.22.062.193.066.17.068.148.072c.045.024.088.048.127.073l.107.076.047.039.082.079.066.08c.01.014.02.027.028.041l.046.083.02.041.03.084.02.085.021.062c.024.049.056.113.065.193l.036.116.156.458.217.586.261.672.288.712.199.476 1.811-.259.229 1.732-.229.046c-.144.03-.288.049-.433.065l-.431.045.213.326c.394.63.795 1.437.912 2.442l.024.279.087 5.682H18.75V9.333c0-.787-.34-1.411-.884-2.17l-.316-.43-.084-.086c-.031-.036-.066-.079-.102-.132-2.134.214-4.464.318-7.114.318-2.642 0-4.964-.103-7.092-.316l-.054.119c-.023.04-.052.082-.093.123l-.307.407c-.533.722-.89 1.33-.946 2.051l-.008.2V15H0V9.333C0 8.045.512 7.09 1.124 6.268l-.19-.02c-.145-.014-.289-.028-.433-.05l-.217-.037-.229-.046.231-1.732 1.812.259.226-.539.147-.368.208-.537.25-.67.417-1.191c.022-.046.046-.094.075-.145l.038-.061.045-.063.053-.064.1-.097.083-.065.097-.065.113-.064.13-.064.15-.063.172-.062.193-.06.218-.057.244-.055.132-.027.285-.05.316-.048.17-.023.363-.042.398-.038.433-.033.471-.03.51-.023.55-.018.593-.013.637-.006L10.25 0zM15 12.75c.866 0 1.357.57 1.412 1.142l.005.108v1h-1.75v-.5H5.75v.5H4v-1c0-.586.388-1.177 1.25-1.244l.167-.006H15zM2.732 8.976l2.495.132-.091 1.747-2.497-.132.093-1.747zm14.87-.041l.093 1.747-2.497.132-.093-1.747 2.497-.132zm-7.359-7.102c-.226-.006-.445-.01-.657-.012h-.617l-.575.011-.535.02-.494.028-.231.016-.631.056-.368.042-.325.044-.408.067-.31.062-.152.037-.316.921-.192.543-.223.587c-.079.2-.163.403-.251.605 4.182.298 8.332.299 12.666-.001l-.114-.258-.222-.516-.207-.503-.095-.24-.17-.446-.137-.386c-.02-.058-.037-.113-.053-.164-.042-.033-.074-.076-.096-.124l-.195-.043-.248-.044-.143-.022-.322-.045-.37-.043-.635-.06-.475-.037-.513-.031-.548-.027-.58-.02-.612-.013-.646-.004z" transform="translate(-978.000000, -437.000000) translate(0.000000, 60.000000) translate(762.000000, 92.000000) translate(32.000000, 197.000000) translate(0.000000, 72.000000) translate(184.000000, 16.000000) translate(1.750000, 4.500000)"></path></g></g></g></g></g></g></g></g></svg>'
+      icon: icons.car,
     },
     {
-      id: 'driver join top bar',
-      url: "https://join.tapsi.ir/login?utm_source=SEO&utm_medium=Banner-Blog&utm_campaign=DA_SEO",
-      color: '#1976d2',
+      id: 'Driver Join - White',
+      url: "https://join.tapsi.ir/driver?utm_source=Blog&utm_medium=join-cta-filled-btn&utm_campaign=DA_SEO&_gl=1*vev481*_ga*OTAwMzc2OTI0LjE2NzU4NDQ0NTY.*_ga_0F24611KVS*MTcyOTM0NDk3NC40NzguMS4xNzI5MzQ1MDI4LjYuMC4w",
+      backgroundColor: '#fff',
+      color: '#0065dc',
+      text: 'ثبت‌نام راننده خودرو',
+      icon: icons.car,
+    },
+    {
+      id: 'Driver Join - Top bar',
+      url: "https://join.tapsi.ir/driver?utm_source=SEO&utm_medium=Banner-Blog&utm_campaign=DA_SEO&_gl=1*11sm3ge*_ga*OTAwMzc2OTI0LjE2NzU4NDQ0NTY.*_ga_0F24611KVS*MTcyOTM0NDk3NC40NzguMS4xNzI5MzQ1NTgwLjYwLjAuMA",
+      backgroundColor: '#0065dc',
       padding: '5px 16px',
       text: 'ثبت‌نام راننده تپسی',
-    },
-    {
-      id: 'website',
-      url: "https://tapsi.ir",
-      color: '#ff5722',
-      text: 'وب‌سایت تپسی',
-      icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" fill-rule="evenodd"><g fill="#FFF"><g><g><g><g><g><path fill-opacity="0" d="M0 0H24V24H0z" transform="translate(-978.000000, -437.000000) translate(0.000000, 60.000000) translate(762.000000, 92.000000) translate(32.000000, 197.000000) translate(0.000000, 72.000000) translate(184.000000, 16.000000)"></path><g><path d="M10.25 0l.977.007.604.012.561.018.52.023.48.03.65.052.387.04.18.022.338.048.305.051.276.056.246.059.22.062.193.066.17.068.148.072c.045.024.088.048.127.073l.107.076.047.039.082.079.066.08c.01.014.02.027.028.041l.046.083.02.041.03.084.02.085.021.062c.024.049.056.113.065.193l.036.116.156.458.217.586.261.672.288.712.199.476 1.811-.259.229 1.732-.229.046c-.144.03-.288.049-.433.065l-.431.045.213.326c.394.63.795 1.437.912 2.442l.024.279.087 5.682H18.75V9.333c0-.787-.34-1.411-.884-2.17l-.316-.43-.084-.086c-.031-.036-.066-.079-.102-.132-2.134.214-4.464.318-7.114.318-2.642 0-4.964-.103-7.092-.316l-.054.119c-.023.04-.052.082-.093.123l-.307.407c-.533.722-.89 1.33-.946 2.051l-.008.2V15H0V9.333C0 8.045.512 7.09 1.124 6.268l-.19-.02c-.145-.014-.289-.028-.433-.05l-.217-.037-.229-.046.231-1.732 1.812.259.226-.539.147-.368.208-.537.25-.67.417-1.191c.022-.046.046-.094.075-.145l.038-.061.045-.063.053-.064.1-.097.083-.065.097-.065.113-.064.13-.064.15-.063.172-.062.193-.06.218-.057.244-.055.132-.027.285-.05.316-.048.17-.023.363-.042.398-.038.433-.033.471-.03.51-.023.55-.018.593-.013.637-.006L10.25 0zM15 12.75c.866 0 1.357.57 1.412 1.142l.005.108v1h-1.75v-.5H5.75v.5H4v-1c0-.586.388-1.177 1.25-1.244l.167-.006H15zM2.732 8.976l2.495.132-.091 1.747-2.497-.132.093-1.747zm14.87-.041l.093 1.747-2.497.132-.093-1.747 2.497-.132zm-7.359-7.102c-.226-.006-.445-.01-.657-.012h-.617l-.575.011-.535.02-.494.028-.231.016-.631.056-.368.042-.325.044-.408.067-.31.062-.152.037-.316.921-.192.543-.223.587c-.079.2-.163.403-.251.605 4.182.298 8.332.299 12.666-.001l-.114-.258-.222-.516-.207-.503-.095-.24-.17-.446-.137-.386c-.02-.058-.037-.113-.053-.164-.042-.033-.074-.076-.096-.124l-.195-.043-.248-.044-.143-.022-.322-.045-.37-.043-.635-.06-.475-.037-.513-.031-.548-.027-.58-.02-.612-.013-.646-.004z" transform="translate(-978.000000, -437.000000) translate(0.000000, 60.000000) translate(762.000000, 92.000000) translate(32.000000, 197.000000) translate(0.000000, 72.000000) translate(184.000000, 16.000000) translate(1.750000, 4.500000)"></path></g></g></g></g></g></g></g></g></svg>'
+      icon: icons.car,
     },
   ]
 
@@ -159,7 +161,7 @@
 
     if (selectedCta) {
       const code = `<button
-  style="outline: none; background: ${selectedCta.color}; border-radius: 12px !important; color: #FFF; display: flex; font-family: Dana; flex-direction: row; font-size: 16px; margin: 7px; max-width: 224px !important; padding: ${selectedCta.padding ? `${selectedCta.padding}` : '16px'}; text-align: center; box-sizing: border-box; text-decoration: none; width: 100%;"
+  style="outline: none; background: ${selectedCta.backgroundColor}; border-radius: 12px !important; color: ${selectedCta.color || "#fff"}; display: flex; font-family: Dana; flex-direction: row; font-size: 16px; margin: 7px; max-width: 224px !important; padding: ${selectedCta.padding ? `${selectedCta.padding}` : '16px'}; text-align: center; box-sizing: border-box; text-decoration: none; width: 100%;"
   role="button"
   onclick="(
     async function(_url) {
@@ -175,7 +177,7 @@
       window.open(_url, '${target}');
     }).call(this, '${selectedCta.url}')"
 >
-  ${selectedCta.icon && showIcon ? `<i style="height: 24px; width: 24px;">${selectedCta.icon}</i>` : ''}
+  ${selectedCta.icon && showIcon ? `<i style="height: 24px; width: 24px; color: ${selectedCta.color || '#fff'}">${selectedCta.icon}</i>` : ''}
   ${selectedCta.text ? `<span style="margin: auto; line-height: initial; font-weight: 600;">${selectedCta.text}</span>` : ''}
 </button>`;
 
@@ -193,11 +195,11 @@
   function copyCode() {
     const codeText = document.getElementById("outputCode").textContent;
     navigator.clipboard.writeText(codeText).then(() => {
-      const alertBox = document.getElementById("copyAlert");
-      alertBox.style.display = "block";
+      const copyCta = document.getElementById("copyBtn");
+      copyCta.innerText = "Copied!";
       setTimeout(() => {
-        alertBox.style.display = "none";
-      }, 3000); // Hide after 3 seconds
+        copyCta.innerText = "Copy";
+      }, 3000);
     }).catch(err => {
       console.error("Error copying text: ", err);
     });
